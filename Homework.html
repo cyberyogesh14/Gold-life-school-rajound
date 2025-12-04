@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homework - Gold Life School</title>
-    <link rel="stylesheet" href="./style.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -13,7 +12,7 @@
     <div class="logo">Gold Life School</div>
     <div class="menu-btn" onclick="toggleMenu()">☰</div>
     <nav id="navbar">
-        <a href="./index.html">Home</a>
+        <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
         <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
@@ -22,14 +21,12 @@
     </nav>
 </header>
 
-
 <section class="homework-hero">
     <h1>Homework & Assignments</h1>
     <p>Daily homework for Class 1st to 10th</p>
 </section>
 
 <section class="homework-list">
-
     <div class="hw-card"><h3>Class 1</h3><div class="hw-details"><p>Homework will be updated soon.</p></div></div>
     <div class="hw-card"><h3>Class 2</h3><div class="hw-details"><p>Homework will be updated soon.</p></div></div>
     <div class="hw-card"><h3>Class 3</h3><div class="hw-details"><p>Homework will be updated soon.</p></div></div>
@@ -40,12 +37,13 @@
     <div class="hw-card"><h3>Class 8</h3><div class="hw-details"><p>Homework will be updated soon.</p></div></div>
     <div class="hw-card"><h3>Class 9</h3><div class="hw-details"><p>Homework will be updated soon.</p></div></div>
     <div class="hw-card"><h3>Class 10</h3><div class="hw-details"><p>Homework will be updated soon.</p></div></div>
-
 </section>
 
 <footer>
     © 2025 Gold Life School, Rajound | Designed by Yogesh Harit
 </footer>
+
+<!-- Homework Popup Box -->
 <div id="hw-lightbox">
     <div class="hw-popup-box">
         <span class="close-btn">&times;</span>
@@ -55,37 +53,37 @@
 </div>
 
 <script>
-    const cards = document.querySelectorAll(".hw-card");
-    const lightbox = document.getElementById("hw-lightbox");
-    const hwTitle = document.getElementById("hw-title");
-    const hwContent = document.getElementById("hw-content");
-    const closeBtn = document.querySelector(".close-btn");
+// 🔹 Mobile Menu
+function toggleMenu() {
+    const nav = document.getElementById("navbar");
+    nav.classList.toggle("show");
+}
 
-    cards.forEach(card => {
-        card.addEventListener("click", () => {
-            const title = card.querySelector("h3").innerText;
-            const details = card.querySelector(".hw-details p").innerText;
+// 🔹 Homework Popup
+const cards = document.querySelectorAll(".hw-card");
+const lightbox = document.getElementById("hw-lightbox");
+const hwTitle = document.getElementById("hw-title");
+const hwContent = document.getElementById("hw-content");
+const closeBtn = document.querySelector(".close-btn");
 
-            hwTitle.innerText = title;
-            hwContent.innerText = details;
-            lightbox.style.display = "flex";
-        });
+cards.forEach(card => {
+    card.addEventListener("click", () => {
+        hwTitle.innerText = card.querySelector("h3").innerText;
+        hwContent.innerText = card.querySelector(".hw-details p").innerText;
+        lightbox.style.display = "flex";
     });
+});
 
-    closeBtn.addEventListener("click", () => {
+closeBtn.addEventListener("click", () => {
+    lightbox.style.display = "none";
+});
+
+lightbox.addEventListener("click", (e) => {
+    if (!document.querySelector(".hw-popup-box").contains(e.target)) {
         lightbox.style.display = "none";
-    });
-
-    lightbox.addEventListener("click", (e) => {
-        if (e.target !== document.querySelector(".hw-popup-box")) {
-            lightbox.style.display = "none";
-        }
-    });
+    }
+});
 </script>
-
 
 </body>
 </html>
-
-
-
