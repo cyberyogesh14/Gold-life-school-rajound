@@ -863,3 +863,66 @@ header {
         padding: 15px;
     }
 }
+
+/* ==== About Page Responsive Fix ==== */
+
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    padding: 50px 20px;
+}
+
+.about-content .box {
+    background: #fff;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Principal Section Fix */
+.principal-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 50px 20px;
+}
+
+.principal-section img {
+    width: 360px;
+    max-width: 100%;
+    border-radius: 14px;
+    object-fit: cover;
+}
+
+/* Mobile Layout Adjust */
+@media (max-width: 768px) {
+
+    .about-hero h1 {
+        font-size: 28px;
+    }
+
+    .about-content {
+        padding: 25px 16px;
+        gap: 18px;
+    }
+
+    .principal-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .principal-section img {
+        width: 80%;
+        max-width: 280px;
+        margin-bottom: 10px;
+    }
+
+    .principal-text p {
+        font-size: 15px;
+        line-height: 22px;
+    }
+}
