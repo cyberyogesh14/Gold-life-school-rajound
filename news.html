@@ -53,7 +53,17 @@
 <footer>
     © 2025 Gold Life School, Rajound | Designed by Yogesh Harit
 </footer>
-    
+
+<!-- 🔥 Popup HTML always BEFORE SCRIPT -->
+<div id="news-lightbox">
+    <div class="news-popup-box">
+        <span class="close-news">&times;</span>
+        <h2 id="popup-title"></h2>
+        <p id="popup-text"></p>
+        <span class="date" id="popup-date"></span>
+    </div>
+</div>
+
 <script>
 // Toggle Menu
 function toggleMenu() {
@@ -89,19 +99,10 @@ newsPopup.addEventListener("click", (e) => {
 });
 </script>
 
-    
-    <div id="news-lightbox">
-    <div class="news-popup-box">
-        <span class="close-news">&times;</span>
-        <h2 id="popup-title"></h2>
-        <p id="popup-text"></p>
-        <span class="date" id="popup-date"></span>
-    </div>
-</div>
-
-
 </body>
 </html>
+
+
 
 
 
