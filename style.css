@@ -813,5 +813,53 @@ header {
     }
 }
 
+/* News Page Fix for Mobile */
+.news-hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: #2B4C7E;
+    color: #fff;
+}
 
+.news-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    padding: 50px;
+}
 
+.news-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.news-card h3 {
+    margin-bottom: 10px;
+    color: #2B4C7E;
+}
+
+.news-card p {
+    font-size: 15px;
+    color: #333;
+}
+
+.date {
+    display: block;
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #FFCC00;
+}
+
+/* Mobile better layout fix */
+@media (max-width: 768px) {
+    .news-container {
+        padding: 20px;
+        gap: 14px;
+    }
+    .news-card {
+        padding: 15px;
+    }
+}
