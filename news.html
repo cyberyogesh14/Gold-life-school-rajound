@@ -21,7 +21,6 @@
     </nav>
 </header>
 
-
 <section class="news-hero">
     <h1>Latest News & Announcements</h1>
     <p>Stay updated with school events and achievements</p>
@@ -29,105 +28,39 @@
 
 <section class="news-container">
 
-    <!-- NEWS 1 -->
     <div class="news-card">
-        <img src="news-images/winners.jpg" class="news-img">
-        <h3>Gold Life School Winners Announced</h3>
-        <p>Our talented students secured top positions & made us proud!</p>
-        <span class="date">12 Dec 2025</span>
-        <a class="news-read"
-        href="news-detail.html?title=Gold Life School Winners Announced&text=Our talented students secured top positions & made us proud!&date=12 Dec 2025&img=news-images/winners.jpg">
-        Read More →
-        </a>
-    </div>
-
-    <!-- NEWS 2 -->
-    <div class="news-card">
-        <img src="news-images/admission.jpg" class="news-img">
-        <h3>Admissions Open</h3>
-        <p>Registrations are open for Nursery to 8th class for session 2025!</p>
-        <span class="date">05 Dec 2025</span>
-        <a class="news-read"
-        href="news-detail.html?title=Admissions Open&text=Registrations are open for Nursery to 8th class for session 2025!&date=05 Dec 2025&img=news-images/admission.jpg">
-        Read More →
-        </a>
-    </div>
-
-    <!-- NEWS 3 -->
-    <div class="news-card">
-        <img src="news-images/class.jpg" class="news-img">
-        <h3>Learning Beyond Books</h3>
-        <p>Students improving knowledge with discipline & modern education.</p>
+        <img src="news-images/news1.jpg" alt="News">
+        <h3>Gold Life Students at DIDAC 2025</h3>
+        <p>Our brilliant students participated in Asia's biggest education event and interviewed top innovators!</p>
         <span class="date">28 Nov 2025</span>
-        <a class="news-read"
-        href="news-detail.html?title=Learning Beyond Books&text=Students improving knowledge with discipline & modern education.&date=28 Nov 2025&img=news-images/class.jpg">
-        Read More →
-        </a>
     </div>
 
-    <!-- NEWS 4 -->
     <div class="news-card">
-        <img src="news-images/farewell.jpg" class="news-img">
+        <img src="news-images/news2.jpg" alt="News">
+        <h3>Admissions Open 2025-26</h3>
+        <p>Admissions from Nursery onwards now open for 2025-26 session.</p>
+        <span class="date">5 Dec 2025</span>
+    </div>
+
+    <div class="news-card">
+        <img src="news-images/news3.jpg" alt="News">
+        <h3>Inter-School Sports Meet</h3>
+        <p>Gold Life School secured 1st position in District Level Sports Competition.</p>
+        <span class="date">3 Nov 2025</span>
+    </div>
+
+    <div class="news-card">
+        <img src="news-images/news4.jpg" alt="News">
         <h3>Farewell Party 2024-25</h3>
-        <p>Students celebrated their unforgettable school journey!</p>
-        <span class="date">14 Dec 2025</span>
-        <a class="news-read"
-        href="news-detail.html?title=Farewell Party 2024-25&text=Students celebrated their unforgettable school journey!&date=14 Dec 2025&img=news-images/farewell.jpg">
-        Read More →
-        </a>
+        <p>School organized Farewell celebration for outgoing batch.</p>
+        <span class="date">22 Oct 2025</span>
     </div>
 
 </section>
 
-
 <footer>
     © 2025 Gold Life School, Rajound | Designed by Yogesh Harit
 </footer>
-
-<!-- Popup HTML -->
-<div id="news-lightbox">
-    <div class="news-popup-box">
-        <span class="close-news">&times;</span>
-        <h2 id="popup-title"></h2>
-        <p id="popup-text"></p>
-        <span class="date" id="popup-date"></span>
-    </div>
-</div>
-
-<script>
-// Toggle Menu
-function toggleMenu() {
-    const nav = document.getElementById("navbar");
-    nav.classList.toggle("show");
-}
-
-// Popup Script
-const cards = document.querySelectorAll(".news-card");
-const newsPopup = document.getElementById("news-lightbox");
-const popupTitle = document.getElementById("popup-title");
-const popupText = document.getElementById("popup-text");
-const popupDate = document.getElementById("popup-date");
-const closePopup = document.querySelector(".close-news");
-
-cards.forEach(card => {
-    card.addEventListener("click", () => {
-        popupTitle.innerText = card.querySelector("h3").innerText;
-        popupText.innerText = card.querySelector("p").innerText;
-        popupDate.innerText = card.querySelector(".date").innerText;
-        newsPopup.style.display = "flex";
-    });
-});
-
-closePopup.addEventListener("click", () => {
-    newsPopup.style.display = "none";
-});
-
-newsPopup.addEventListener("click", (e) => {
-    if (!document.querySelector(".news-popup-box").contains(e.target)) {
-        newsPopup.style.display = "none";
-    }
-});
-</script>
 
 </body>
 </html>
