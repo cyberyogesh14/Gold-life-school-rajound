@@ -519,3 +519,117 @@ footer {
     font-size: 18px;
 }
 
+
+/* Images will resize nicely on small screens */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ====================  TABLET & MOBILE  ==================== */
+@media (max-width: 768px) {
+
+    /* Header & Navbar */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 16px;
+    }
+
+    header .logo {
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    /* Hero section */
+    .hero {
+        height: auto;
+        padding: 80px 16px 50px;
+        background-position: center top;
+    }
+
+    .hero-text {
+        margin-top: 0;   /* phone par text beech me aa jayega */
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 9px 18px;
+        font-size: 14px;
+    }
+
+    /* Common section spacing */
+    .features,
+    .about-content,
+    .principal-section,
+    .gallery-grid,
+    .news-container,
+    .contact-container,
+    .homework-list,
+    .video-section {
+        padding: 24px 16px;
+        gap: 16px;
+    }
+
+    /* Principal section vertical */
+    .principal-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .principal-section img {
+        width: 70%;
+        max-width: 260px;
+    }
+
+    /* Contact page blocks full width */
+    .contact-info,
+    .contact-form {
+        width: 100%;
+    }
+
+    /* Gallery, News, Homework: 1 column on mobile */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .news-container,
+    .homework-list {
+        grid-template-columns: 1fr;
+    }
+
+    /* Video iframe smaller on phone */
+    .video-box iframe {
+        height: 220px;
+    }
+}
+
+/* ====================  VERY SMALL PHONES  ==================== */
+@media (max-width: 480px) {
+    nav a {
+        font-size: 12px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
