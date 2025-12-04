@@ -18,7 +18,6 @@
         <a href="contact.html">Contact</a>
         <a href="news.html" class="active">News</a>
         <a href="homework.html">Homework</a>
-
     </nav>
 </header>
 
@@ -30,49 +29,62 @@
 
 <section class="news-container">
 
+    <!-- NEWS 1 -->
     <div class="news-card">
-        <h3>Gold Life Students at DIDAC 2025</h3>
-        <p>Our brilliant students participated in Asia's biggest education event and interviewed top innovators!</p>
+        <img src="news-images/winners.jpg" class="news-img">
+        <h3>Gold Life School Winners Announced</h3>
+        <p>Our talented students secured top positions & made us proud!</p>
+        <span class="date">12 Dec 2025</span>
+        <a class="news-read"
+        href="news-detail.html?title=Gold Life School Winners Announced&text=Our talented students secured top positions & made us proud!&date=12 Dec 2025&img=news-images/winners.jpg">
+        Read More →
+        </a>
+    </div>
+
+    <!-- NEWS 2 -->
+    <div class="news-card">
+        <img src="news-images/admission.jpg" class="news-img">
+        <h3>Admissions Open</h3>
+        <p>Registrations are open for Nursery to 8th class for session 2025!</p>
+        <span class="date">05 Dec 2025</span>
+        <a class="news-read"
+        href="news-detail.html?title=Admissions Open&text=Registrations are open for Nursery to 8th class for session 2025!&date=05 Dec 2025&img=news-images/admission.jpg">
+        Read More →
+        </a>
+    </div>
+
+    <!-- NEWS 3 -->
+    <div class="news-card">
+        <img src="news-images/class.jpg" class="news-img">
+        <h3>Learning Beyond Books</h3>
+        <p>Students improving knowledge with discipline & modern education.</p>
         <span class="date">28 Nov 2025</span>
-
-        <!-- Read More Button -->
         <a class="news-read"
-        href="news-detail.html?title=Gold Life Students at DIDAC 2025&text=Our brilliant students participated in Asia's biggest education event and interviewed top innovators!&date=28 Nov 2025&img=news-images/didac.jpg">
+        href="news-detail.html?title=Learning Beyond Books&text=Students improving knowledge with discipline & modern education.&date=28 Nov 2025&img=news-images/class.jpg">
         Read More →
         </a>
     </div>
 
+    <!-- NEWS 4 -->
     <div class="news-card">
-        <h3>Winter Break Announced</h3>
-        <p>Winter holidays will start from 1st January to 31st January.</p>
-        <span class="date">10 Dec 2025</span>
-
-        <!-- Read More Button -->
+        <img src="news-images/farewell.jpg" class="news-img">
+        <h3>Farewell Party 2024-25</h3>
+        <p>Students celebrated their unforgettable school journey!</p>
+        <span class="date">14 Dec 2025</span>
         <a class="news-read"
-        href="news-detail.html?title=Winter Break Announced&text=Winter holidays will start from 1st January to 31st January.&date=10 Dec 2025&img=news-images/winter.jpg">
-        Read More →
-        </a>
-    </div>
-
-    <div class="news-card">
-        <h3>Inter-School Sports Meet</h3>
-        <p>Gold Life School secured 1st position in District Level Sports Competition.</p>
-        <span class="date">3 Nov 2025</span>
-
-        <!-- Read More Button -->
-        <a class="news-read"
-        href="news-detail.html?title=Inter-School Sports Meet&text=Gold Life School secured 1st position in District Level Sports Competition.&date=3 Nov 2025&img=news-images/sports.jpg">
+        href="news-detail.html?title=Farewell Party 2024-25&text=Students celebrated their unforgettable school journey!&date=14 Dec 2025&img=news-images/farewell.jpg">
         Read More →
         </a>
     </div>
 
 </section>
 
+
 <footer>
     © 2025 Gold Life School, Rajound | Designed by Yogesh Harit
 </footer>
 
-<!-- 🔥 Popup HTML always BEFORE SCRIPT -->
+<!-- Popup HTML -->
 <div id="news-lightbox">
     <div class="news-popup-box">
         <span class="close-news">&times;</span>
@@ -89,7 +101,7 @@ function toggleMenu() {
     nav.classList.toggle("show");
 }
 
-// News Popup
+// Popup Script
 const cards = document.querySelectorAll(".news-card");
 const newsPopup = document.getElementById("news-lightbox");
 const popupTitle = document.getElementById("popup-title");
@@ -119,12 +131,3 @@ newsPopup.addEventListener("click", (e) => {
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
