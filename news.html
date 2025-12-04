@@ -55,11 +55,40 @@
 </footer>
     
 <script>
+// Toggle Menu
 function toggleMenu() {
     const nav = document.getElementById("navbar");
     nav.classList.toggle("show");
 }
+
+// News Popup
+const cards = document.querySelectorAll(".news-card");
+const newsPopup = document.getElementById("news-lightbox");
+const popupTitle = document.getElementById("popup-title");
+const popupText = document.getElementById("popup-text");
+const popupDate = document.getElementById("popup-date");
+const closePopup = document.querySelector(".close-news");
+
+cards.forEach(card => {
+    card.addEventListener("click", () => {
+        popupTitle.innerText = card.querySelector("h3").innerText;
+        popupText.innerText = card.querySelector("p").innerText;
+        popupDate.innerText = card.querySelector(".date").innerText;
+        newsPopup.style.display = "flex";
+    });
+});
+
+closePopup.addEventListener("click", () => {
+    newsPopup.style.display = "none";
+});
+
+newsPopup.addEventListener("click", (e) => {
+    if (!document.querySelector(".news-popup-box").contains(e.target)) {
+        newsPopup.style.display = "none";
+    }
+});
 </script>
+
     
     <div id="news-lightbox">
     <div class="news-popup-box">
@@ -73,6 +102,7 @@ function toggleMenu() {
 
 </body>
 </html>
+
 
 
 
