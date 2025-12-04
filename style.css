@@ -682,3 +682,93 @@ img {
     display: flex !important;
 }
 
+/* ===== Desktop Header & Nav (common) ===== */
+header {
+    background: #2B4C7E;
+    color: white;
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+#navbar {
+    display: flex;
+    gap: 18px;
+}
+
+#navbar a {
+    color: #FFCC00;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#navbar a:hover,
+#navbar a.active {
+    color: #ffffff;
+}
+
+/* Hamburger button – by default desktop pe hidden */
+.menu-btn {
+    display: none;
+    font-size: 28px;
+    color: #FFCC00;
+    cursor: pointer;
+}
+
+/* ===== MOBILE NAVBAR (max 768px) ===== */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: row;
+        align-items: center;
+        padding: 12px 16px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    /* mobile pe hamburger dikhana */
+    .menu-btn {
+        display: block;
+    }
+
+    /* mobile pe nav hidden by default */
+    #navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #244674;
+        position: absolute;
+        top: 60px;      /* header ke niche */
+        left: 0;
+        padding: 10px 0;
+        z-index: 50;
+    }
+
+    #navbar a {
+        display: block;
+        padding: 10px 15px;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+        font-size: 15px;
+        text-align: left;
+    }
+
+    #navbar a:last-child {
+        border-bottom: none;
+    }
+
+    /* jab JS se .show lagti hai tab menu open */
+    #navbar.show {
+        display: flex;
+    }
+}
+
+
+
